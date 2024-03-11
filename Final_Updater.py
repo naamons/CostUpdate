@@ -62,7 +62,7 @@ if uploaded_file is not None:
         updates, skips = 0, 0
 
         for _, row in data.iterrows():
-            sku, cost = row['SKU'], row['Cost']
+            sku, cost = row['Part No.'], row['Cost']
             shopify_id = sku_mapping.get(sku)
 
             if shopify_id and pd.notnull(cost):
